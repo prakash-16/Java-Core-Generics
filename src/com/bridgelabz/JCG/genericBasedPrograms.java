@@ -1,26 +1,32 @@
 package com.bridgelabz.JCG;
 
 public class genericBasedPrograms {
+	public int i;
 	
 	
-	public int maxInteger(int a, int b, int c) {
-		if(a > b) {
-			if(a>c) {
+	public String maxInteger(String a, String b, String c) {
+		if(a.compareTo(b) == 1) {
+			if(a.compareTo(c) == 1) {
 				return a;
 			}
-			return c;
+			else {
+				return c;
+			}
 		}
 		else {
-			if(b > c) {
+			if(b.compareTo(c) == 1) {
 				return b;
 			}
-			return c;
+			else {
+				return c;
+			}
 		}
+			
 	}
 	
 	public static void main(String[] args) {
 		genericBasedPrograms B1 = new genericBasedPrograms();
-		System.out.println("The maximum number in the list is - " + B1.maxInteger(5,3,2));
+		System.out.println("The maximum number in the list is  " + B1.maxInteger("Bananana","Apple","Peach"));
 	}
 
 }
