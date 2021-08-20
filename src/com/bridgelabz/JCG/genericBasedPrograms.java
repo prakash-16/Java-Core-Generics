@@ -12,7 +12,7 @@ public class genericBasedPrograms<E extends Comparable<E>> {
 		this.c = c;
 		this.d = d;
 	}
-	public E maxData() {
+	public void maxData() {
 	      E max = a;   
 
 	      if(b.compareTo(max) > 0) {
@@ -25,12 +25,15 @@ public class genericBasedPrograms<E extends Comparable<E>> {
 	      if(d.compareTo(max) > 0) {
 	    	  max = d;
 	      }
-	      return max;
+	      printMax(max);
 	   }
+	public void printMax(E max) {
+		System.out.println("The Maximum data is : " + max);
+	}
 	
 	public static void main(String[] args) {
 		genericBasedPrograms<Integer> B1 = new genericBasedPrograms<Integer>(1,2,3,4);
-		System.out.println("The Maximum data is : " + B1.maxData());
+		B1.maxData();
 	}
 	
 }
